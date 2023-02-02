@@ -3,6 +3,10 @@ import './App.css';
 
 import {useState} from 'react';
 import MySlect from './components/MySelect';
+import BookContextProvider from './contexts/BookContext';
+import Navbar from './components/Navbar';
+import BookList from './components/BookList';
+import NewBookForm from './components/BooksForm';
 
 /*
 const App = () => {
@@ -36,7 +40,14 @@ const App = () => {
 function App() {
   return (
     <div className="App">
-        <MySlect />
+        <BookContextProvider>
+          <MySlect />
+          <Navbar />
+          <BookList />
+          <NewBookForm />
+        </BookContextProvider>
+
+        
     </div>
   );
 
