@@ -1,9 +1,9 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Modal, Button } from 'react-bootstrap'
 import BookContextProvider from '../../contexts/BookContext'
 import NewBookForm from '../AddBooksForm'
 function ModalDialog() {
-  const [isShow, invokeModal] = React.useState(false)
+  const [isShow, invokeModal] = useState(false)
   const initModal = () => {
     return invokeModal(!isShow)
   }

@@ -1,9 +1,12 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import BookDetails from './BookDetails';
 import { BookContext } from '../contexts/BookContext';
 
 const BookList = () => {
   const { books } = useContext(BookContext);
+  useEffect(() => {
+  });
+  
   return books.length ? (
     <div className="book-list">
       <ul>

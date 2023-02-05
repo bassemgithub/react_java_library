@@ -13,8 +13,10 @@ const MySlect = () => {
      axios.get('http://localhost:8080/users').then(function (response) {
         // handle success
         setOptions(response.data);
-        console.log("use effect", response.data);
       })
+      .catch(function (error) {
+        console.error(error);
+      }); 
   }, []);
 
   const handleChange = (event) => {
