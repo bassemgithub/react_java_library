@@ -9,7 +9,7 @@ function ModalDialog() {
   }
   return (
     <>
-      <Button variant="success" onClick={initModal}>
+      <Button variant="secondary" onClick={initModal}>
         Add Book
       </Button>
       <Modal show={isShow}>
@@ -21,16 +21,6 @@ function ModalDialog() {
           <NewBookForm />
           </BookContextProvider>
         </Modal.Body>
-        {/* 
-        <Modal.Footer>
-          <Button variant="danger" onClick={initModal}>
-            Close
-          </Button>
-          <Button variant="dark" onClick={initModal}>
-            Store
-          </Button>
-        </Modal.Footer>
-        */}
       </Modal>
     </>
   )

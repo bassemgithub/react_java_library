@@ -9,7 +9,6 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import EditBookForm from './EditBooksForm';
 import BookDetailsInfo from './BookDetailsInfo';
-import "../components/modal/Modal.css";
 
 
 const BookDetails = ({ book }) => {
@@ -49,9 +48,6 @@ const BookDetails = ({ book }) => {
             <EditBookForm book={book} />
         </Modal.Body>
         <Modal.Footer>
-                <Button variant="secondary" onClick={handleClose}>
-                    Close Button
-                </Button>
         </Modal.Footer>
     </Modal>
 
@@ -66,9 +62,6 @@ const BookDetails = ({ book }) => {
             <BookDetailsInfo book={book} />
         </Modal.Body>
         <Modal.Footer>
-                <Button variant="secondary" onClick={handleCloseInfo}>
-                    Close Button
-                </Button>
         </Modal.Footer>
     </Modal>
     </li>

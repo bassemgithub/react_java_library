@@ -18,8 +18,6 @@ function App() {
           <BookList />
           <ModalDialog/>
         </BookContextProvider>
-
-        
     </div>
   );
 

@@ -25,7 +25,7 @@ const  NewBookForm= () => {
             <input type="text" placeholder='ISBN code' value={isbn} onChange={(e) => setISBN(e.target.value)} required />
             <input type="text" placeholder='Plot' value={plot} onChange={(e) => setPlot(e.target.value)} required />
             <input type="text" placeholder='Completed page number' value={pageNumber} onChange={(e) => setPAgeNumber(e.target.value)} required />
-            <input type="submit" value="add book" />
+            <input type="submit" className="btn-secondary" value="Submit" />
         </form>
     );
 }
