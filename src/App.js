@@ -6,7 +6,11 @@ import MySlect from './components/MySelect';
 import BookContextProvider from './contexts/BookContext';
 import Navbar from './components/Navbar';
 import BookList from './components/BookList';
-import NewBookForm from './components/BooksForm';
+import NewBookForm from './components/AddBooksForm';
+import Modal from './components/modal/Modal';
+import ModalDialog from './components/modal/ModalDialog';
+import ModalDialogInfo from './components/modal/ModalBookInfo';
+import BookDetailsInfo from './components/BookDetailsInfo';
 
 /*
 const App = () => {
@@ -44,7 +48,9 @@ function App() {
           <MySlect />
           <Navbar />
           <BookList />
-          <NewBookForm />
+          
+          <ModalDialog/>
+          <ModalDialogInfo />
         </BookContextProvider>
 
         

@@ -34,7 +34,7 @@ const MySlect = () => {
   return (
     <div>
       <select value={selected} onChange={handleChange}>
-       {/*<option key='0' value="--Choose an option--" data-rc="0"> --Choose an option--</option> */}
+       <option key='0' value="--Choose an option--" data-rc="0"> --Choose an option--</option> 
          {options.map(option => (
           <option key={option.id} value={option.value} data-rc={option.id}> 
             {option.name + " " +option.surname}
