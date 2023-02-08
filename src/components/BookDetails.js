@@ -37,7 +37,7 @@ const BookDetails = ({ book }) => {
       <Col><button  onClick={handleShow}> Edit </button></Col>
       <Col><button onClick={() => handleShowInfo()} className=""> Info </button></Col>
       </Row>
-
+    <>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
             <Modal.Title>
@@ -50,8 +50,8 @@ const BookDetails = ({ book }) => {
         <Modal.Footer>
         </Modal.Footer>
     </Modal>
-
-
+    </>
+    <>
     <Modal show={showInfo} onHide={handleCloseInfo}>
         <Modal.Header closeButton>
             <Modal.Title>
@@ -64,6 +64,7 @@ const BookDetails = ({ book }) => {
         <Modal.Footer>
         </Modal.Footer>
     </Modal>
+    </>
     </li>
   );
 }

@@ -1,11 +1,10 @@
-import React, { createContext, useEffect, useState } from 'react';
+import React, { createContext, useState } from 'react';
 import axios from 'axios';
 
 export const BookContext = createContext();
 
 const BookContextProvider = (props) => {
   const [books, setBooks] = useState([]);
-  const [singlebook, setSingBook] = useState([]);
   const [bookDetails, setBookDetails] = useState([]);
  
   const addBook = (title, author, isbn, plot, pageNumber) => {
@@ -18,7 +17,6 @@ const BookContextProvider = (props) => {
       "pageNumber": pageNumber,
     })
       .then(response => {
-        //const book_id = response.data;
         setBooks([...books, response.data ]);
       
       })
@@ -66,19 +64,17 @@ const BookContextProvider = (props) => {
 
     const updateBook = (id, updatedEBook) => {
       axios.put(`http://localhost:8080/book/edit/${id}`,updatedEBook).then(response => {
-        setSingBook(books.map((book) => book.id === id ? updatedEBook : book))
+
+        setBooks(books.map((book) => book.id === id ? updatedEBook : book))
+
       })
       .catch(function (error) {
         console.error(error);
       }); 
   }
 
-  useEffect(() => {
-  },[]);
-
-
   return (
-    <BookContext.Provider value={{ books, bookDetails, singlebook, addBook, updateBook, removeBook, listBook, bookInfos }}>  
+    <BookContext.Provider value={{ books, bookDetails, addBook, updateBook, removeBook, listBook, bookInfos }}>  
       {props.children}
     </BookContext.Provider>
   );
